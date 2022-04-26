@@ -1,0 +1,193 @@
+.party {
+  position: fixed;
+  display: flex;
+  top: 3.5rem;
+  left: 0;
+
+  width: 103vw;
+  height: 103vh;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 1000ms ease;
+  z-index: 1;
+}
+.party-darken {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 1000ms ease;
+}
+.giftcard {
+  position: absolute;
+  left: 0%;
+  width: 80%;
+
+  align-self: center;
+  background-color: #fad763;
+  filter: opacity(0%);
+  transform: scale(0%);
+}
+.expandgiftcard {
+  left: 50%;
+  transform: scale(100%) translate(-50%, -40%);
+  transition: all 800ms ease;
+  transition-delay: 50ms;
+}
+
+.box {
+  align-self: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: #f44336;
+  height: 160px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 200px;
+  filter: opacity(0%);
+}
+
+.pullbox {
+  margin-bottom: -60rem;
+  transition: all 1500ms;
+}
+.ribbon {
+  align-self: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-image: linear-gradient(#f4c836, #f5db46);
+  height: 160px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  box-shadow: 0px 0px 3px 1px black;
+  width: 30px;
+}
+.crossribbon {
+  align-self: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-image: linear-gradient(#f4c836, #f5db46);
+  height: 30px;
+  margin: -6rem auto 0 auto;
+  transform-origin: bottom;
+  box-shadow: 0px 0px 5px 1px black;
+  width: 200px;
+}
+
+.lidgroup {
+  position: relative;
+  align-self: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 40px;
+  margin: -8.2rem auto 80px 0px;
+  transform-origin: bottom;
+  width: 210px;
+}
+.bow {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  width: 30px;
+  height: 40px;
+}
+.bow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0rem;
+  left: -10px;
+  width: 100%;
+  height: 70px;
+  background-color: #f44336;
+  box-shadow: 0 0 1px 1px #222;
+  transform: rotate(-45deg);
+  border-radius: 10px 0 0 10px;
+}
+.bow::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  height: 70px;
+  background-color: #f44336;
+  box-shadow: -3px 0 5px 1px rgba(34, 34, 34, 0.411);
+  transform: rotate(45deg);
+  border-radius: 0 8px 10px 0;
+}
+
+.lid {
+  position: relative;
+  align-self: center;
+  background-image: linear-gradient(#f4c836, #f48236);
+  height: 40px;
+  margin: -8.2rem auto 80px -7px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 6px 10px 1px rgba(34, 34, 34, 0.623);
+  width: 214px;
+}
+.liftlid {
+  margin-top: -80rem;
+  transition: all 1200ms;
+}
+
+.bounce {
+  animation-name: bounceanim;
+  animation-timing-function: ease;
+}
+@keyframes bounceanim {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: scale(0.95, 1.05) translateY(-50px) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0) rotate(1deg);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0) rotate(0deg);
+  }
+}
+.lidbounce {
+  animation-name: lidbounceanim;
+  animation-timing-function: ease;
+}
+@keyframes lidbounceanim {
+  0% {
+    transform: scale(1, 1) translateY(0) rotate(0deg);
+  }
+  13% {
+    transform: scale(1, 1) translateY(0) translateY(-10px) rotate(2deg);
+  }
+  31% {
+    transform: scale(1, 1) translateY(0) rotate(0deg);
+  }
+  34% {
+    transform: scale(1, 1) translateY(0) rotate(2deg);
+  }
+  43% {
+    transform: scale(1, 1) translateY(-2px) rotate(-2deg);
+  }
+  48% {
+    transform: scale(1, 1) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+.showgift {
+  filter: opacity(100%);
+  transition: all 500ms ease;
+}

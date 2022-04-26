@@ -1,0 +1,382 @@
+.cow-background {
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  width: 100vw;
+  min-height: 93.2vh;
+  max-height: auto;
+  margin-bottom: 2rem;
+  background-image: radial-gradient(ellipse at bottom, #a3b2ff, #00bfff);
+  z-index: 0;
+}
+
+.bitofpadding {
+  height: 4rem;
+}
+
+/*** Animals ***/
+.mole {
+  width: 2em;
+  position: relative;
+  left: -8em;
+}
+.mole2 {
+  width: 10em;
+  position: absolute;
+  top: -3em;
+  left: 1em;
+}
+.dog {
+  width: 2em;
+  position: relative;
+  right: -8em;
+}
+.dog2 {
+  width: 6em;
+  position: absolute;
+  bottom: -2em;
+  right: -8em;
+}
+
+/*** Weather Elements ***/
+.rainy {
+  background-image: radial-gradient(ellipse at bottom, #a3b2ff, #717581);
+}
+
+.weather-element {
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 1s;
+  height: 5em;
+  margin-bottom: -1.2rem;
+}
+
+.goal-picture {
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  object-fit: contain;
+  margin-bottom: 0;
+  box-shadow: 0 0 50px #fff;
+  border-radius: 100%;
+  filter: opacity(90%);
+}
+
+.goal-width {
+  width: 100%;
+}
+
+.sun {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  margin-top: 0.2em;
+  margin-bottom: 0.5rem;
+  background-image: radial-gradient(ellipse at center, #fff4a3, #ffcc00);
+  box-shadow: 0 0 50px #fff;
+  border-radius: 100%;
+}
+.sun-overlay {
+  position: absolute;
+  left: 50%;
+  top: 0.43rem;
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  transform: translate(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(230, 226, 36, 0.103),
+    rgba(252, 248, 17, 0.356) 50%,
+    rgba(238, 235, 54, 0.726) 75%,
+    rgb(245, 241, 23) 90%
+  );
+  border-radius: 100%;
+  z-index: 100;
+}
+
+.grass {
+  position: absolute;
+  bottom: -4rem;
+  left: 0%;
+  height: 20vh;
+  width: 100vw;
+  background-image: radial-gradient(ellipse at center top, #c0ffa3, #1e7e00);
+  border-radius: 30% 30% 0 0;
+  z-index: -10;
+}
+
+/*** Cow Elements ***/
+.cow {
+  cursor: pointer;
+  left: calc(45% - 20vw);
+  width: 40vw;
+  max-width: 426px;
+  max-height: 320px;
+  height: 30vw;
+  bottom: 6vh;
+  position: absolute;
+}
+.cow-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.face {
+  border: 1px solid black;
+  width: 25%;
+  height: 40%;
+  border-radius: 15vw/10vw;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.face:hover {
+  transform: rotate(-360deg);
+}
+
+.ears {
+  position: absolute;
+  top: -8%;
+  width: 100%;
+  height: 100%;
+}
+
+.ear {
+  position: static;
+  width: 25%;
+  height: 30%;
+  border: 0.2em solid #964b00;
+  border-bottom: 0;
+  border-radius: 60% 60% 60% 60%;
+  background-color: #b5651d;
+}
+
+.left {
+  float: left;
+  transform: rotate(-80deg);
+}
+
+.right {
+  float: right;
+  transform: rotate(60deg);
+}
+
+.eyes {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  right: 10%;
+}
+
+.eye {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transition-property: all;
+  transition-duration: 1s;
+  box-sizing: border-box;
+}
+.eye:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+.eye-left {
+  left: 10%;
+}
+.eye-right {
+  left: 20%;
+}
+.eye-left:hover {
+  transform: rotate(360deg);
+}
+.eye-right:hover {
+  transform: rotate(-360deg);
+}
+.pupil {
+  position: absolute;
+  display: block;
+  width: 53%;
+  height: 53%;
+  background: #000;
+  border-radius: 50%;
+  top: 16%;
+  left: 34%;
+  margin-top: -3px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.pupil.startled {
+  top: 40%;
+  left: 36%;
+}
+.snout {
+  border: 1px solid black;
+
+  width: 110%;
+  height: 40%;
+  background: pink;
+  margin-left: -5%;
+  position: relative;
+  top: 64%;
+  border-radius: 22%/36%;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.snout:hover {
+  transform: scale3d(1.2, 1.2, 1);
+}
+.nostril {
+  position: absolute;
+  width: 15%;
+  top: 30%;
+  height: 36%;
+  background: black;
+}
+.nostril-left {
+  left: 24%;
+  border-radius: 20% 64%;
+}
+.nostril-right {
+  right: 24%;
+  border-radius: 64% 20%;
+}
+.tongue {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  background-color: rgb(235, 126, 213);
+  display: block;
+  border-radius: 0 0 30% 30%;
+  left: 50%;
+  bottom: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.tongue.out {
+  bottom: -16%;
+}
+
+/** Body **/
+.body {
+  z-index: -1;
+  border: 1px solid black;
+  width: 96%;
+  height: 60%;
+  border-radius: 8vw 10vw 15vw 10vw;
+  background: white;
+  left: 0;
+  position: absolute;
+  bottom: 14%;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.spot {
+  background: #000;
+  position: absolute;
+}
+.spot-1 {
+  width: 22%;
+  height: 60%;
+  left: -4%;
+  border-radius: 50%/40%;
+}
+.spot-1:after {
+  width: 129%;
+  height: 86%;
+  border-radius: 100%;
+  left: 20%;
+  top: -20%;
+  content: ' ';
+  position: absolute;
+  background: #000;
+  display: block;
+}
+.spot-3 {
+  width: 46%;
+  height: 90%;
+  border-radius: 80%/60%;
+  right: 0;
+  top: 60%;
+}
+.spot-3:after {
+  content: ' ';
+  height: 100%;
+  width: 80%;
+  border-radius: 80%/60%;
+  right: -20%;
+  top: -20%;
+  display: block;
+  position: absolute;
+  background: #000;
+}
+
+.legs {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 36%;
+}
+.leg {
+  border: 1px solid black;
+  background: white;
+  height: 72%;
+  width: 8%;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 1s;
+  border-radius: 45%/15%;
+}
+.leg-bl {
+  bottom: 0;
+  left: 26%;
+  z-index: -2;
+}
+.leg-fl {
+  bottom: 0;
+  left: 72%;
+  z-index: -2;
+}
+.leg-br {
+  bottom: -6%;
+  left: 16%;
+}
+.leg-fr {
+  bottom: -6%;
+  left: 62%;
+}
+.hoof {
+  background-color: #333;
+  width: 110%;
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  border-radius: 20% 20% 6% 6%;
+}
+
+.task-icon-wrapper {
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+  margin-left: -0.5rem;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid black;
+  box-shadow: -2px 2px 2px 0px grey;
+}
